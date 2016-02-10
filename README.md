@@ -6,17 +6,33 @@ c/c++ style conditional compilation
 
 **In**
 
+.babelrc
 ```js
-// input code
+"plugins": [
+    ["conditional-compilation", {
+        DEBUG: 2
+    }]
+]
+```
+
+somfile.js
+```js
+let DEBUG;
+"#if DEBUG > 1";
+DEBUG = 1;
+"#endif";
 ```
 
 **Out**
 
+somfile.js
 ```js
-"use strict";
+let DEBUG;
 
-// output code
+DEBUG = 1;
 ```
+
+For *complete* examples look at [test directory](test/fixtures).
 
 ## Installation
 
@@ -32,20 +48,14 @@ $ npm install babel-plugin-conditional-compilation
 
 ```json
 {
-  "plugins": ["conditional-compilation"]
+  "plugins": ["conditional-compilation", {/* compile-time constants */}]
 }
-```
-
-### Via CLI
-
-```sh
-$ babel --plugins conditional-compilation script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["conditional-compilation"]
+  plugins: ["conditional-compilation", {/* compile-time constants*/}]
 });
 ```
