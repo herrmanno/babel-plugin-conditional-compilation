@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/herrmanno/babel-plugin-conditional-compilation.svg?branch=master)](https://travis-ci.org/herrmanno/babel-plugin-conditional-compilation)
+
 # babel-plugin-conditional-compilation
 
 c/c++ style conditional compilation
