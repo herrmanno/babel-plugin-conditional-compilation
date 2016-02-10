@@ -7,10 +7,10 @@ c/c++ style conditional compilation
 **In**
 
 .babelrc
-```js
+```json
 "plugins": [
     ["conditional-compilation", {
-        DEBUG: 2
+        "DEBUG": 2
     }]
 ]
 ```
@@ -46,7 +46,7 @@ $ npm install babel-plugin-conditional-compilation
 
 **.babelrc**
 
-```json
+```javascript
 {
   "plugins": ["conditional-compilation", {/* compile-time constants */}]
 }
